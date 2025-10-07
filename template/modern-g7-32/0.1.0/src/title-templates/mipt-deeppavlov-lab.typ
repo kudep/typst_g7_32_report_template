@@ -69,7 +69,7 @@
     per-line( // TODO: Вынести подобные элементы в модуль стандартных титульных компонентов с обработкой аргументов
         force-indent: true,
         align: left,
-        (value: [УДК: #udk], when-present: udk),
+        (value: [УДК #udk], when-present: udk),
         (value: [Рег. №: #research-number], when-present: research-number),
         (value: [Рег. № ИКРБС: #report-number], when-present: report-number),
     )

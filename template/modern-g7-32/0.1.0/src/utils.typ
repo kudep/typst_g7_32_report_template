@@ -79,20 +79,3 @@
     [], [], table.cell(align: center)[#small-text[#details]], [], part-cell
   )
 }
-
-#let sign-field-nodata(name, position, part: none, details: "подпись") = {
-  let part-cell = []
-  if part != none { 
-    part-cell = table.cell(align: top)[(#small-text[#part])]
-  }
-  
-  set par(justify: false)
-  table(
-    stroke: none,
-    inset: (x: 0pt, y: 3pt),
-    columns: (5fr, 1fr, 3fr, 1fr, 3fr),
-    [#position], [], [], [], table.cell(align: bottom)[#unbreak-name(name)],
-    table.hline(start: 2, end: 3),
-    [], [], table.cell(align: center)[#small-text[#details]], [], part-cell
-  )
-}

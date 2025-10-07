@@ -1,4 +1,4 @@
-#let template-names = ("default", "mai-university-lab")
+#let template-names = ("default", "mai-university-lab", "mipt-deeppavlov-lab")
 
 #let title-template-factory(template, arguments-function) = {
     return (..arguments) => template(..arguments-function(..arguments))
