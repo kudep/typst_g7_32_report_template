@@ -1,7 +1,7 @@
 #set text(font: "Times New Roman")
 
 // TODO: межстрочный интервал дял первых 2 страниц одинарный, а далее 1.5 
-#import "template/modern-g7-32/0.1.0/src/export.typ": gost, title-templates
+#import "packages/modern-g7-32/0.1.0/src/export.typ": gost, title-templates
 #show: gost.with(
   title-template: title-templates.mipt-deeppavlov-lab,
   ministry: "Министерство науки и высшего образования Российской Федерации
