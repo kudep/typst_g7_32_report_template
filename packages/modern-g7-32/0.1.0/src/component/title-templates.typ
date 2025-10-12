@@ -11,7 +11,7 @@
 #let templates = {
     let result = (:)
     for template in template-names {
-        import "/template/modern-g7-32/0.1.0/src/title-templates/" + template + ".typ" as module
+        import "/packages/modern-g7-32/0.1.0/src/title-templates/" + template + ".typ" as module
         result.insert(template, title-template-factory(module.template, module.arguments))
     }
     result
