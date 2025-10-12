@@ -3,7 +3,7 @@
 // TODO: межстрочный интервал дял первых 2 страниц одинарный, а далее 1.5 
 #import "packages/modern-g7-32/0.1.0/src/export.typ": gost, title-templates
 #show: gost.with(
-  title-template: title-templates.mipt-deeppavlov-lab,
+  // title-template: title-templates.mipt-deeppavlov-lab,
   ministry: "Министерство науки и высшего образования Российской Федерации
 Федеральное государственное автономное образовательное
 учреждение высшего образования 

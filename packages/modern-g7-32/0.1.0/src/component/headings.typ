@@ -6,10 +6,10 @@
   abbreviations: [Перечень сокращений и обозначений],
   intro: [Введение],
   conclusion: [Заключение],
-  references: [СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ],
+  references: [Список использованных источников],
 )
 
-#let structure-heading-style = it => {  
+#let structure-heading-style = it => {
   align(center)[#upper(it)]
 }
 
@@ -17,7 +17,7 @@
   structure-heading-style(heading(numbering: none)[#body])
 }
 
-#let headings(text-size, indent) = body => {
+#let headings(text-size, indent, pagebreaks) = body => {
   show heading: set text(size: text-size)
   set heading(numbering: "1.1")
 
@@ -30,19 +30,25 @@
   }
 
   show heading.where(level: 1): it => {
-    pagebreak(weak: true)
+    if pagebreaks {
+      pagebreak(weak: true)
+    }
     it
   }
 
-  let structural-heading = structural-heading-titles.values().fold(selector, (acc, i) => acc.or(heading.where(body: i, level: 1)))
+  let structural-heading = structural-heading-titles
+    .values()
+    .fold(selector, (acc, i) => acc.or(heading.where(body: i, level: 1)))
 
   show structural-heading: set heading(numbering: none)
   show structural-heading: it => {
-    pagebreak(weak: true)
+    if pagebreaks {
+      pagebreak(weak: true)
+    }
     structure-heading-style(it)
   }
 
   show heading: set block(below: 2em, above: 2em)
-  
+
   body
 }
