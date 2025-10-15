@@ -6,7 +6,7 @@
   abbreviations: [Перечень сокращений и обозначений],
   intro: [Введение],
   conclusion: [Заключение],
-  references: [СПИСОК ИСПОЛЬЗОВАННЫХ ИСТОЧНИКОВ],
+  references: [Список использованных источников],
 )
 
 #let structure-heading-style = it => {  

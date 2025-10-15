@@ -1,8 +1,8 @@
 
 = ПРИЛОЖЕНИЕ А Текст программы
-#lorem(100)
+#lorem(100) @tab1
 
-#table(
+#figure(table(
   columns: (1fr, auto, auto),
   inset: 10pt,
   align: horizon,
@@ -19,4 +19,6 @@
   [image("tetrahedron.svg")],
   $ sqrt(2) / 12 a^3 $,
   [$a$: edge length]
-)
+),
+  caption: [Подпись над таблицей],
+) <tab1>
