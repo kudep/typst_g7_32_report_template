@@ -1,8 +1,8 @@
 #set text(font: "Times New Roman")
 
-// DONE: межстрочный интервал дял первых 2 страниц одинарный, а далее 1.5 
+// DONE: межстрочный интервал для первых 2 страниц одинарный, а далее 1.5 
 
-#set par(leading: 1.5em)
+// #set par(leading: 0.5em)
 #import "packages/modern-g7-32/0.1.0/src/export.typ": gost, title-templates
 #show: gost.with(
   title-template: title-templates.mipt-deeppavlov-lab,
@@ -50,16 +50,20 @@
   ),
 )
 #show heading.where(level: 1): set align(center)
-#show heading.where(level: 2): set text(hyphenate: true)
+#show heading.where(level: 2): set text(hyphenate: true) // TODO: текст до конца строки и не должно быть дифиса с разделение слов
+// #show heading.where(level: 2): set par(linebreaks:"simple")
 #show heading.where(level: 3): set text(weight: "regular", hyphenate: true)
 #show heading.where(level: 4): set text(weight: "regular", hyphenate: true)
 #show heading.where(level: 5): set text(weight: "regular", hyphenate: true)
-#set par(leading: 1em)
+#set par(leading: 0.42cm, spacing: 0.42cm, first-line-indent: (amount: 1.25cm, all: true))
 
 #include "parts/abstract.typ"
+// DONE: Абзацный отступ 1.25 см
+// TODO: поменять шрифт для формул должен совпадать с основным текстом
 // DONE: гост не регламентирует, но лучше сделать отступы нод пунктов в 2 раза меньше (это просто желание)
 // DONE: Список используемых источников должен быть с большой буквы
 #outline(indent: 1.4em)
+#set heading(numbering: none)
 
 #include "parts/defs.typ"
 #include "parts/intro.typ"

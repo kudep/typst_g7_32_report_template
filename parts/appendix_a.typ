@@ -7,7 +7,7 @@
   inset: 10pt,
   align: horizon,
   table.header(
-    [], [*Volume*], [*Parameters*],
+    [], [Volume], [Parameters],
   ),
   [image("cylinder.svg")],
   $ pi h (D^2 - d^2) / 4 $,
