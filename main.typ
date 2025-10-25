@@ -1,5 +1,5 @@
 #set text(font: "Times New Roman")
-
+// #show math.equation: set text(font: "Times New Roman")
 // DONE: межстрочный интервал для первых 2 страниц одинарный, а далее 1.5 
 
 // #set par(leading: 0.5em)
@@ -50,11 +50,10 @@
   ),
 )
 #show heading.where(level: 1): set align(center)
-#show heading.where(level: 2): set text(hyphenate: true) // TODO: текст до конца строки и не должно быть дифиса с разделение слов
-// #show heading.where(level: 2): set par(linebreaks:"simple")
-#show heading.where(level: 3): set text(weight: "regular", hyphenate: true)
-#show heading.where(level: 4): set text(weight: "regular", hyphenate: true)
-#show heading.where(level: 5): set text(weight: "regular", hyphenate: true)
+#show heading.where(level: 2): set text(hyphenate: false) // TODO: текст до конца строки и не должно быть дифиса с разделение слов
+#show heading.where(level: 3).or(heading.where(level: 4)).or(heading.where(level: 5)): set text(weight: "regular", hyphenate: false)
+
+#show heading: set par(justify: true)
 #set par(leading: 0.42cm, spacing: 0.42cm, first-line-indent: (amount: 1.25cm, all: true))
 
 #include "parts/abstract.typ"
